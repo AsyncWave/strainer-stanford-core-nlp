@@ -14,8 +14,8 @@ WORKDIR stanford-corenlp-full-2018-10-05
 
 RUN export CLASSPATH="`find . -name '*.jar'`"
 
-ENV PORT 9000
+# ENV PORT 9000
 
-EXPOSE $PORT
+# EXPOSE $PORT
 
-CMD java -mx6g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -timeout 1000
+CMD java -mx6g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -timeout 1000 -p $PORT
