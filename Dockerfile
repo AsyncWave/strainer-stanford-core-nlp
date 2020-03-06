@@ -18,4 +18,4 @@ RUN export CLASSPATH="`find . -name '*.jar'`"
 
 EXPOSE $PORT
 
-CMD java -mx6g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -timeout 1000 -p $PORT
+CMD java -mx6g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port $PORT -timeout 1000
